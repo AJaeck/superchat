@@ -8,8 +8,10 @@ import 'firebase/auth';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 
+require("dotenv").config();
+
 firebase.initializeApp({
-  apiKey: "AIzaSyCEfGS3hc5UqpGW4NqBoJtl3AgRB5V52p4",
+  apiKey: process.env.API_KEY,
   authDomain: "ad-bar-superchat.firebaseapp.com",
   projectId: "ad-bar-superchat",
   storageBucket: "ad-bar-superchat.appspot.com",
